@@ -54,9 +54,9 @@
       border-radius: 8px;
     }
     .lightbox-close {
-      position: fixed;
-      top: 16px;
-      right: 20px;
+      position: absolute;
+      top: -60px;
+      right: 0;
       background: rgba(255,255,255,0.15);
       border: 2px solid rgba(255,255,255,0.6);
       color: #fff;
@@ -96,8 +96,10 @@
 
   <!-- 전체화면 이미지 오버레이 -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
-    <img src="zoom.png" alt="summer" onclick="event.stopPropagation()" />
+    <div style="position: relative; display: inline-block;" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+      <img src="zoom.png" alt="summer" />
+    </div>
   </div>
 
   <script>
